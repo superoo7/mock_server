@@ -12,7 +12,6 @@ import (
 
 type TestFunc struct {
 	Hello string
-	Test  string
 }
 
 type DataFunc struct {
@@ -23,9 +22,7 @@ type DataFunc struct {
 
 func main() {
 	r := mux.NewRouter()
-	r.HandleFunc("/", getFunc).Methods("GET", "POST")
 	r.HandleFunc("/test", testFunc).Methods("GET")
-	r.HandleFunc("/{any}", getFunc).Methods("GET", "POST")
 	r.NotFoundHandler = http.HandlerFunc(getFunc)
 
 	if err := http.ListenAndServe(":3001", r); err != nil {
@@ -51,7 +48,7 @@ func getFunc(w http.ResponseWriter, r *http.Request) {
 // testFunc a sample route for responding to API
 func testFunc(w http.ResponseWriter, r *http.Request) {
 	fmt.Println("test route")
-	respondWithJSON(w, http.StatusOK, &TestFunc{"test", "b"})
+	respondWithJSON(w, http.StatusOK, &TestFunc{"test"})
 }
 
 // responsWithJson will reply to client in JSON format
