@@ -1,3 +1,3 @@
 #/bin/sh
 
-gin --path main --port 8001 run main/main.go
+gin --path main --port 8000 run main/main.go
