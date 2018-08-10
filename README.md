@@ -23,5 +23,7 @@ gin --path main --port 8000 run main/main.go
 
 # Installation / Dependency
 
-- https://github.com/codegangsta/gin
+<!-- - https://github.com/codegangsta/gin -->
+
 - https://github.com/gorilla/mux
+- https://github.com/rs/cors
