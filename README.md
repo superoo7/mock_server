@@ -4,9 +4,12 @@ Backend Mock server
 
 # Start server
 
-Start server with `launch.sh`
+- Setup `server.crt` and `server.key` in the main directory. [Resource](https://github.com/denji/golang-tls)
+- In main directory, run `go run main.go`.
 
-## Linux or Mac
+<!-- Start server with `launch.sh` -->
+
+<!-- ## Linux or Mac
 
 ```bash
 gin --path main --port 8000 run main/main.go
@@ -16,7 +19,7 @@ gin --path main --port 8000 run main/main.go
 
 ```bash
 %GOPATH%\BIN\gin.exe --path main --port 8000 run main/main.go
-```
+``` -->
 
 # Installation / Dependency
 

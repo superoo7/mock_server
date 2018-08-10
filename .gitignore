@@ -2,3 +2,5 @@ gin-bin
 gin-bin.exe
 .DS_STORE
 *.swp
+server.crt
+server.key
